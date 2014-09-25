@@ -1,3 +1,9 @@
+libvisensor (1.0-5) precise; urgency=low
+
+  * adding copyright 
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Thu, 25 Sep 2014 17:12:12 +0200
+
 libvisensor (1.0-4) precise; urgency=low
 
   * Missing includes 
