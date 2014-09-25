@@ -1,3 +1,9 @@
+libvisensor (1.0-3) precise; urgency=low
+
+  * Adding includes 
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Thu, 25 Sep 2014 16:23:28 +0200
+
 libvisensor (1.0-2) precise; urgency=low
 
   * Missing dependency
