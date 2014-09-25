@@ -39,6 +39,12 @@ remake_pack_deb(
   DEPENDS libvisensor
 )
 
+remake_pack_deb(
+  COMPONENT examples
+  DESCRIPTION "Examples"
+  DEPENDS libvisensor
+)
+
 remake_distribute_deb(
   DISTRIBUTION lucid
   SECTION libs
