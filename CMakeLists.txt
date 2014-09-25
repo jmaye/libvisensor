@@ -30,7 +30,7 @@ remake_pack_deb(
 remake_pack_deb(
   COMPONENT dev
   DESCRIPTION "Development headers"
-  DEPENDS libvisensor libboost-dev
+  DEPENDS libvisensor libboost-all-dev
 )
 
 remake_pack_deb(
