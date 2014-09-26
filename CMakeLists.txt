@@ -8,12 +8,13 @@ remake_project(
   RELEASE alpha
   SUMMARY "A C++-based library for interfacing the VI-sensor."
   AUTHOR "Skybotix AG"
+  AUTHOR "Jerome Maye"
   CONTACT "jerome.maye@mavt.ethz.ch"
   HOME "https://github.com/jmaye/libvisensor"
   LICENSE "Apache License, Version 2.0 (ALv2)"
   INSTALL /usr/
   EXTRA_CXX_FLAGS -std=c++0x
-  HEADER_DESTINATION visensor
+  HEADER_DESTINATION include/visensor
   PREFIX visensor-
 )
 
