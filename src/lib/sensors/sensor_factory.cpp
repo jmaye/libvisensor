@@ -38,6 +38,7 @@
 #include "sensors/camera_mt9v034.hpp"
 #include "sensors/camera_tau640.hpp"
 #include "sensors/imu_adis16448.hpp"
+#include "sensors/imu_adis16488.hpp"
 #include "sensors/imu_mpu9150.hpp"
 #include "sensors/corner_mt9v034.hpp"
 #include "sensors/dense_matcher.hpp"
@@ -112,6 +113,21 @@ const void SensorFactory::createSensors(
             std::pair<SensorId::SensorId, Sensor::Ptr>(sensor_id, new_imu));
         break;
       }
+
+      case SensorType::SensorType::IMU_ADIS16488: {
+		  ImuAdis16488::Ptr new_imu = boost::make_shared<ImuAdis16488>(
+			  sensor_id, config_connection_weak);
+		  VISENSOR_DEBUG("ADIS16488 created with sensor_id: %d\n", sensor_id);
+
+		  boost::thread *t1 = new boost::thread(
+			  &ImuAdis16488::processMeasurements, new_imu);
+		  threads->add_thread(t1);
+
+		  sensor_map->insert(
+			  std::pair<SensorId::SensorId, Sensor::Ptr>(sensor_id, new_imu));
+		  break;
+		}
+
       case SensorType::SensorType::CORNER_MT9V034: {
         CornerMt9v034::Ptr new_CornerDetector =
             boost::make_shared<CornerMt9v034>(sensor_id,

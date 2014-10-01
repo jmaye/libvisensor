@@ -4,7 +4,7 @@ include(ReMake)
 
 remake_project(
   libvisensor
-  VERSION 1.0
+  VERSION 1.0.1
   RELEASE alpha
   SUMMARY "A C++-based library for interfacing the VI-sensor."
   AUTHOR "Skybotix AG"

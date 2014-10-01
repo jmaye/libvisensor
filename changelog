@@ -1,3 +1,9 @@
+libvisensor (1.0.1-7) trusty; urgency=low
+
+  * upstream version 1.0.1
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Wed, 01 Oct 2014 10:13:32 +0200
+
 libvisensor (1.0-6) precise; urgency=low
 
   * correcting includes 

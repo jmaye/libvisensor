@@ -51,6 +51,7 @@
 #include "sensors/camera_mt9v034.hpp"
 #include "sensors/camera_tau640.hpp"
 #include "sensors/imu_adis16448.hpp"
+#include "sensors/imu_adis16488.hpp"
 #include "sensors/corner_mt9v034.hpp"
 
 

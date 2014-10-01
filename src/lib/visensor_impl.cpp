@@ -170,6 +170,7 @@ void ViSensorDriver::Impl::setImuCallback(
   for (Sensor::IdMap::const_iterator it = sensors_.begin();
       it != sensors_.end(); ++it) {
     if (it->second->type() == SensorType::IMU_ADIS16448
+    	|| it->second->type() == SensorType::IMU_ADIS16488
         || it->second->type() == SensorType::MPU_9150)
       it->second->setUserCallback(callback);
   }
@@ -215,6 +216,7 @@ void ViSensorDriver::Impl::startAllImus(uint32_t rate) {
   for (Sensor::IdMap::const_iterator it = sensors_.begin();
         it != sensors_.end(); ++it) {
       if (it->second->type() == SensorType::IMU_ADIS16448
+          || it->second->type() == SensorType::IMU_ADIS16488           
           || it->second->type() == SensorType::MPU_9150)
           startSensor(it->first, rate);
   }
@@ -268,6 +270,7 @@ std::vector<SensorId::SensorId> ViSensorDriver::Impl::getListOfImuIDs() const {
   for (Sensor::IdMap::const_iterator it = sensors_.begin();
         it != sensors_.end(); ++it) {
       if (it->second->type() == SensorType::IMU_ADIS16448
+          || it->second->type() == SensorType::IMU_ADIS16488
           || it->second->type() == SensorType::MPU_9150)
     list_of_imus.push_back(it->first);
   }
